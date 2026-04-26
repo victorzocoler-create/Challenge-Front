@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+header {
+  background: #003b70;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  color: white;
+}
+
+.logo img {
+  height: 30px;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* AVATAR FIXO */
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: url("https://i.pravatar.cc/100?img=12") center/cover;
+}
+
+/* TÍTULO */
+h1 {
+  margin: 20px;
+  color: #003b70;
+  font-size: 32px;
+}
+
+/* LAYOUT */
+.container {
+  display: grid;
+  grid-template-columns: 250px 1fr 250px;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+/* CARD ESQUERDO */
+.card-left {
+  background: #003b70;
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.card-left p {
+  margin-bottom: 15px;
+}
+
+.green {
+  color: #00ff8a;
+}
+
+/* CENTRO */
+.center-area {
+  text-align: center;
+}
+
+.podium {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.bar {
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 10px;
+  font-weight: bold;
+  color: black;
+}
+
+.first {
+  height: 130px;
+  background: gold;
+}
+
+.second {
+  height: 90px;
+  background: silver;
+}
+
+.third {
+  height: 70px;
+  background: #b87333;
+}
+
+.ranking-title {
+  background: #003b70;
+  color: white;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.ranking-list {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* DIREITA */
+.invite-card {
+  background: #003b70;
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.icon {
+  font-size: 25px;
+}
+
+/* RESPONSIVO */
+/* =========================
+   TABLET (até 1024px)
+========================= */
+@media (max-width: 1024px) {
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .title-area h1 {
+    font-size: 32px;
+  }
+
+  .mission h2 {
+    font-size: 20px;
+  }
+
+  .mission-content p {
+    font-size: 15px;
+  }
+
+  .points span {
+    font-size: 16px;
+  }
+
+  .points strong {
+    font-size: 14px;
+  }
+
+  .arrow {
+    font-size: 24px;
+  }
+
+  /* PONTOS */
+  .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .invite-card {
+    grid-column: span 2;
+    justify-content: center;
+  }
+}
+
+
+/* =========================
+   CELULAR (até 768px)
+========================= */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* TÍTULOS */
+  h1 {
+    font-size: 24px;
+  }
+
+  .title-area h1 {
+    font-size: 26px;
+  }
+
+  /* MISSÕES */
+  .mission h2 {
+    font-size: 17px;
+  }
+
+  .mission-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .mission-content p {
+    font-size: 14px;
+  }
+
+  .points {
+    text-align: left;
+  }
+
+  .points-small {
+    position: static;
+    margin-top: 5px;
+  }
+
+  /* PONTOS */
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .card-left,
+  .invite-card {
+    width: 100%;
+  }
+
+  .center-area {
+    width: 100%;
+  }
+
+  .podium {
+    height: 110px;
+  }
+
+  .bar {
+    width: 40px;
+  }
+
+  /* GERAL */
+  .target-icon {
+    width: 40px;
+    height: 40px;
+  }
+}

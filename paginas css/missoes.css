@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+  color: #003b70;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER (igual ao de pontos) */
+header {
+  background: #003b70;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  color: white;
+}
+
+.logo img {
+  height: 30px;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: url("https://i.pravatar.cc/100?img=12") center/cover;
+}
+
+/* MAIN */
+.main {
+  padding: 20px;
+}
+
+/* TÍTULO COM LOGO */
+.title-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 20px;
+}
+
+.target-icon {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+}
+
+.title-area h1 {
+  font-size: 40px;
+  font-weight: 900;
+  color: #003b70;
+}
+
+/* LISTA DE MISSÕES */
+.missions {
+  width: 90%;
+  margin-left: 20px;
+}
+
+/* MISSÃO BASE */
+.mission {
+  border-bottom: 1px solid #aaa;
+  padding: 18px 10px;
+  position: relative;
+}
+
+.mission h2 {
+  font-size: 22px;
+  color: black;
+  font-weight: 900;
+}
+
+/* MISSÃO ABERTA */
+.mission-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow {
+  font-size: 30px;
+}
+
+/* CONTEÚDO */
+.mission-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.mission-content p {
+  max-width: 600px;
+  font-size: 16px;
+}
+
+/* PONTOS */
+.points {
+  text-align: center;
+  font-weight: bold;
+  color: #003b70;
+}
+
+.points strong {
+  display: block;
+}
+
+.points-small {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+/* MISSÕES DESATIVADAS */
+.disabled {
+  background: #d9d9d9;
+  color: #666;
+}
+
+.disabled h2,
+.disabled .points {
+  color: #666;
+}
+
+/* RESPONSIVO */
+/* =========================
+   TABLET (até 1024px)
+========================= */
+@media (max-width: 1024px) {
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .title-area h1 {
+    font-size: 32px;
+  }
+
+  .mission h2 {
+    font-size: 20px;
+  }
+
+  .mission-content p {
+    font-size: 15px;
+  }
+
+  .points span {
+    font-size: 16px;
+  }
+
+  .points strong {
+    font-size: 14px;
+  }
+
+  .arrow {
+    font-size: 24px;
+  }
+
+  /* PONTOS */
+  .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .invite-card {
+    grid-column: span 2;
+    justify-content: center;
+  }
+}
+
+
+/* =========================
+   CELULAR (até 768px)
+========================= */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* TÍTULOS */
+  h1 {
+    font-size: 24px;
+  }
+
+  .title-area h1 {
+    font-size: 26px;
+  }
+
+  /* MISSÕES */
+  .mission h2 {
+    font-size: 17px;
+  }
+
+  .mission-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .mission-content p {
+    font-size: 14px;
+  }
+
+  .points {
+    text-align: left;
+  }
+
+  .points-small {
+    position: static;
+    margin-top: 5px;
+  }
+
+  /* PONTOS */
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .card-left,
+  .invite-card {
+    width: 100%;
+  }
+
+  .center-area {
+    width: 100%;
+  }
+
+  .podium {
+    height: 110px;
+  }
+
+  .bar {
+    width: 40px;
+  }
+
+  /* GERAL */
+  .target-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
